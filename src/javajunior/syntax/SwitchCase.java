@@ -1,4 +1,4 @@
-package JavaToJunior.part_1;
+package javajunior.syntax;
 
 public class SwitchCase {
     public static void main(String[] args) {
