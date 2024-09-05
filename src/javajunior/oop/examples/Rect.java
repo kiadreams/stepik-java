@@ -1,15 +1,15 @@
-package javajunior.oop;
+package javajunior.oop.examples;
 
 public class Rect {
     int width;
     int length;
 
-    void setSides(int width, int length) {
+    public void setSides(int width, int length) {
         this.width = width;
         this.length = length;
     }
 
-    int getArea() {
+    public int getArea() {
         return width * length;
     }
 }

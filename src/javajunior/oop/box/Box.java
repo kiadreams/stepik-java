@@ -1,29 +1,29 @@
-package javajunior.oop;
+package javajunior.oop.box;
 
 public class Box {
-    double length;
-    double width;
-    double height;
+    public double length;
+    public double width;
+    public double height;
 
-    Box() {
+    public Box() {
         this(10);
     }
 
-    Box(double length, double width, double height) {
+    public Box(double length, double width, double height) {
         this.length = length;
         this.width = width;
         this.height = height;
     }
 
-    Box(double size) {
+    public Box(double size) {
         this(size, size, size);
     }
 
-    Box(Box another) {
+    public Box(Box another) {
         this(another.length, another.width, another.height);
     }
 
-    int compare(Box another) {
+    public int compare(Box another) {
         double currentVolume = getVolume();
         double anotherVolume = another.getVolume();
         int result;
@@ -37,25 +37,25 @@ public class Box {
         return result;
     }
 
-    Box copy() {
+    public Box copy() {
         return new Box(this.length, this.width, this.height);
     }
 
-    Box increase() {
+    public Box increase() {
         return new Box(this.length * 2, this.width * 2, this.height * 2);
     }
 
-    void setDimens(double length, double width, double height) {
+    public void setDimens(double length, double width, double height) {
        this.length = length;
        this.width = width;
        this.height = height;
     }
 
-    double getVolume() {
+    public double getVolume() {
         return length * width * height;
     }
 
-    void showVolume() {
+    public void showVolume() {
         System.out.println(getVolume());
     }
 }

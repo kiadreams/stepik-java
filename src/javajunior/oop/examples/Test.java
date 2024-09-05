@@ -1,4 +1,4 @@
-package javajunior.oop;
+package javajunior.oop.examples;
 
 public class Test {
 
@@ -6,7 +6,7 @@ public class Test {
         return 10 * 10;
     }
 
-    int square(int number) {
+    public int square(int number) {
         return number * number;
     }
 }

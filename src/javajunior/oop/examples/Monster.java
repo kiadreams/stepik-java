@@ -1,4 +1,4 @@
-package javajunior.oop;
+package javajunior.oop.examples;
 
 public class Monster {
 
@@ -20,17 +20,17 @@ public class Monster {
         this.legs = legs;
     }
 
-    void voice(int count, String word) {
+    public void voice(int count, String word) {
         for (int i = 0; i < count; i++) {
             System.out.println(word);
         }
     }
 
-    void voice(int count) {
+    public void voice(int count) {
         this.voice(count, "Grrrrrrrrr...");
     }
 
-    void voice() {
+    public void voice() {
         this.voice(1);
     }
 }

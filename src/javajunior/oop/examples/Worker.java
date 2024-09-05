@@ -1,4 +1,4 @@
-package javajunior.oop;
+package javajunior.oop.examples;
 
 public class Worker {
     String name;
@@ -18,7 +18,7 @@ public class Worker {
         this.salary = salary;
     }
 
-    void showInfo() {
+    public void showInfo() {
         System.out.println(
                 "Сотрудник: " + name + " на должности " + position + " получает зарплату " + salary + " рублей;"
         );

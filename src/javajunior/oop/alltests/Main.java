@@ -1,4 +1,7 @@
-package javajunior.oop;
+package javajunior.oop.alltests;
+
+import javajunior.oop.box.Box;
+import javajunior.oop.examples.*;
 
 public class Main {
 
@@ -19,22 +22,6 @@ public class Main {
         Box box6 = box5.increase();
         box5.showVolume();
         box6.showVolume();
-
-        System.out.println();
-
-        var per1 = new Person();
-        var per2 = new Person();
-        var per3 = new Person();
-        per1.name = "Ivan";
-        per1.weight = 85.5f;
-        per1.age = 34;
-        per2.name = "Roman";
-        per2.weight = 65.5f;
-        per2.age = 45;
-        per3.name = "Gorg";
-        per3.weight = 75.5f;
-        per3.age = 37;
-        System.out.println((per1.age + per2.age + per3.age) / 3);
 
         System.out.println();
 
@@ -68,5 +55,19 @@ public class Main {
         monster.voice(2);
         System.out.println();
         monster.voice(3, "AAAAAAAAA...");
+
+        System.out.println();
+
+        var john = new Person("John", 25);
+        System.out.println(john.getName() + " " + john.getAge());
+        john.setAge(-40);
+        System.out.println(john.getName() + " " + john.getAge());
+
+        System.out.println();
+
+        System.out.println(MyMath.length(10));
+        System.out.println(MyMath.area(10));
+        System.out.println(MyMath.length(10));
+        System.out.println(MyMath.sum(1, 3, 5, 7));
     }
 }
