@@ -1,12 +1,11 @@
-package javajunior.multithreading;
+package javajunior.Multithreading;
 
 public class Main {
-
     static boolean isFive = false;
 
     public static void main(String[] args) {
 
-        Thread thread = new Thread(new Runnable() {
+        var thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 for (int i = 0; i < 10_000_000; i++) {
@@ -16,27 +15,30 @@ public class Main {
                     System.out.println(i);
                     try {
                         Thread.sleep(1000);
-                    } catch (InterruptedException _) {
+                    } catch (InterruptedException e) {
+
                     }
                 }
             }
         });
-        thread.start();
-        Thread thread2 = new Thread(new Runnable() {
+
+        var thread2 = new Thread(new Runnable() {
             @Override
             public void run() {
                 for (int i = 0; i < 10_000_000; i++) {
                     if (isFive) {
                         break;
                     }
-                    System.out.println(i);
+                    System.out.println("Время идёт, а мы работаем!!!");
                     try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException _) {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+
                     }
                 }
             }
         });
+        thread.start();
         thread2.start();
     }
 }
