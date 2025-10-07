@@ -22,4 +22,10 @@ public class Person {
     public String getName() {
         return name;
     }
+
+    @Override
+    public String toString() {
+//        return "Name: " + this.name + ";\n" + "Age: " + this.age + ";";  Не лучщий способ формировать строки!
+        return String.format("Name: %s; Age: %s;", name, age);
+    }
 }
